@@ -6,3 +6,12 @@ Your tasks:
 the body element is clicked. Do not select the h1 element again! 
 2. And now explain to yourself (or someone around you) why this worked! Take all the time you need. Think about when exactly the callback function is executed, 
 and what that means for the variables involved in this example. */
+
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = 'blue';
+  });
+})();
